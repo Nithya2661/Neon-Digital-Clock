@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Neon Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background particles -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <main class="app" role="application" aria-label="Digital Clock">
+    <header class="topbar">
+      <div class="brand" aria-hidden="true">
+        <span class="brand-dot"></span>
+        <span>Neon Clock</span>
+      </div>
+
+      <div class="controls" role="group" aria-label="Clock controls">
+        <button id="themeToggle" class="control-btn" type="button" aria-pressed="false">
+          🌙 Dark
+        </button>
+        <button id="formatToggle" class="control-btn" type="button" aria-pressed="false">
+          24H
+        </button>
+      </div>
+    </header>
+
+    <section class="card glass" aria-label="Clock display">
+      <div class="greeting" id="greeting">Hello</div>
+
+      <div class="time" id="time" aria-live="polite">00:00:00</div>
+
+      <div class="date-row">
+        <div class="date" id="date">—</div>
+        <div class="dow" id="dow">—</div>
+      </div>
+
+      <div class="hint">Local time • Updates every second</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
